@@ -63,3 +63,25 @@ def komunikat(n,k):
     print(f"komunikat nr {n} -> {k}")
 
 komunikat(34,"informacja na temat p90")
+
+#przykład 4 - dekorator sprawdzający typy argumentów
+
+def sprawdz_typy(typy):
+    def dekorator(funkcja):
+        def wrapper(*args,**kwargs):
+            for (arg,typ) in zip(args,typy):
+                if not isinstance(arg,typ):
+                    raise TypeError(f"Argument {arg} nie jest typu: {typ}")
+            return funkcja(*args,**kwargs)
+        return wrapper
+    return dekorator
+
+@sprawdz_typy((int,int))
+def mnozenie(a,b):
+    return a*b
+
+try:
+    print(mnozenie(6,8))
+    print(mnozenie(6,"osiem"))
+except TypeError as tp:
+    print(tp)
