@@ -6,6 +6,6 @@ class EnforceAttributeMeta(type):
 
 class ValidClass(metaclass=EnforceAttributeMeta):
     required_attribute = "jestem obecny"
-    
-class InvalidClass(metaclass=EnforceAttributeMeta):
-    pass
+
+# class InvalidClass(metaclass=EnforceAttributeMeta):
+#     pass
