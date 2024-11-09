@@ -48,3 +48,18 @@ def usypiacz(funkcja):
 def biglista():
     sum([i**5 for i in range(10_000_000)])
 biglista()
+
+#przykład 3
+
+def debug(funkcja):
+    def wrapper(*args):
+        print(f"wołana funkcja: {funkcja.__name__}")
+        funkcja(*args)
+    return wrapper
+
+
+@debug
+def komunikat(n,k):
+    print(f"komunikat nr {n} -> {k}")
+
+komunikat(34,"informacja na temat p90")
