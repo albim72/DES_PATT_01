@@ -9,7 +9,7 @@ class Film(ABC):
         self.create_film()
         
     def create_film(self):
-        print(f"*Utworzono nowy obiekt oparty na klasie {self.__class__.__name__}")
+        print(f"***Utworzono nowy obiekt oparty na klasie {self.__class__.__name__}")
         
     @abstractmethod
     def play(self):
