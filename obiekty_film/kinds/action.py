@@ -7,7 +7,8 @@ class ActionFilm(Film,AwardWinning):
         AwardWinning.__init__(self)
 
     def play(self):
-        print(f"odtwarzanie filmu akcji: {self.title}")
+        print("-"*80)
+        print(f"Odtwarzanie filmu akcji: {self.title}")
 
     def get_info(self) -> str:
         info = f"{self.title}, reżyseria: {self.director},produkcja: {self.year}, czas trwania [h]: {self.duration}"

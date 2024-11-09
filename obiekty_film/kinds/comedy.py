@@ -7,7 +7,7 @@ class ComedyFilm(Film,SeriesPart):
         SeriesPart.__init__(self,series_name,part_number)
 
     def play(self):
-        print(f"odtwarzanie komedii: {self.title}")
+        print(f"Odtwarzanie komedii: {self.title}")
 
     def get_info(self) -> str:
         info = f"{self.title}, reżyseria: {self.director},produkcja: {self.year}, czas trwania [h]: {self.duration}"
