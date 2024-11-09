@@ -19,4 +19,3 @@ def test_zasob():
     with zasob:
         assert zasob.czy_zamkniety is False
     assert zasob.czy_zamkniety is True
-#Mati
