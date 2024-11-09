@@ -4,4 +4,4 @@ class SeriesPart:
         self.part_number = part_number
 
     def get_series_info(self):
-        return f"Seria: {self.series_name}, częśc: {self.part_number}."
+        return f"Seria: {self.series_name}, Część: {self.part_number}."
