@@ -1,3 +1,5 @@
+import time
+
 #przykład 1
 def startstop(funkcja):
     def wrapper(*args):
@@ -24,3 +26,18 @@ def info():
 dmuchanie("świeczek")
 
 info()
+
+#przykład 2
+def pomiarczasu(funkcja):
+    def wrapper():
+        starttime = time.time()
+        funkcja()
+        endtime = time.time()
+        wynik = endtime - starttime
+        print(f"czas wykonania funkcji: {wynik} s")
+    return wrapper
+
+@pomiarczasu
+def biglista():
+    sum([i**5 for i in range(10_000_000)])
+biglista()
