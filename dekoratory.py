@@ -37,7 +37,14 @@ def pomiarczasu(funkcja):
         print(f"czas wykonania funkcji: {wynik} s")
     return wrapper
 
+def usypiacz(funkcja):
+    def wrapper():
+        time.sleep(3)
+        return funkcja()
+    return wrapper
+
 @pomiarczasu
+@usypiacz
 def biglista():
     sum([i**5 for i in range(10_000_000)])
 biglista()
