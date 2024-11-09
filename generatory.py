@@ -55,5 +55,29 @@ print(next(k))
 print(next(k))
 print(next(k))
 
+#przykład 3
+def sendgen():
+    x=0
+    while True:
+        y = yield x
+        if y is None:
+            x = x + 1
+        else:
+            x = 3*y
 
-
+g = sendgen()
+print("_"*60)
+print(next(g))
+print(next(g))
+print(next(g))
+print(next(g))
+print(g.send(112))
+print(next(g))
+print(next(g))
+print(g.send(277))
+print(next(g))
+print(next(g))
+print(g.send(44))
+print(next(g))
+print(next(g))
+print(next(g))
