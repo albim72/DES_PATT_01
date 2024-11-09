@@ -1,4 +1,4 @@
-odp = input("Czy Ziemia jest płaska? Czy chcesz zna odpowiedź? (t/n): ")
+odp = input("Czy Ziemia jest płaska? Czy chcesz znać odpowiedź? (t/n): ")
 if odp.lower() == "t":
     required = True
 else:
