@@ -3,5 +3,5 @@ from userstatus import UserState
 
 class Observer(ABC):
     @abstractmethod
-    def upadate(self,subject:UserState) -> None:
+    def update(self,subject:UserState) -> None:
         pass
