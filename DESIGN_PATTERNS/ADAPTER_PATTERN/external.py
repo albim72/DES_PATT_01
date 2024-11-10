@@ -16,5 +16,5 @@ class Dancer:
     def __str__(self):
         return f"tancerka {self.name}"
 
-    def play(self):
+    def dance(self):
         return "tańczy przy muzyce!"
